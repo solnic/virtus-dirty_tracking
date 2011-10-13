@@ -7,3 +7,5 @@ group :development do
   gem "rspec",     "~> 2.6.0"
   gem "simplecov", "~> 0.4.2", :platforms => [ :mri_19 ]
 end
+
+gemspec
