@@ -24,7 +24,7 @@ shared_examples_for "Dirty Trackable Attribute" do
     end
 
     before do
-      object.attribute_set(attribute_name, attribute_value)
+      object[attribute_name] = attribute_value
     end
 
     it "marks the object as dirty" do
@@ -46,11 +46,11 @@ shared_examples_for "Dirty Trackable Attribute" do
     end
 
     let(:new_value) do
-      model.attributes[attribute_name].typecast(attribute_value_other)
+      model.attributes[attribute_name].coerce(attribute_value_other)
     end
 
     before do
-      object.attribute_set(attribute_name, new_value)
+      object[attribute_name] = new_value
     end
 
     it "marks the object as dirty" do

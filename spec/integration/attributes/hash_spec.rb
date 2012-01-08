@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Virtus::Attributes::Hash do
+describe Virtus::Attribute::Hash do
   it_should_behave_like 'Dirty Trackable Attribute' do
     let(:attribute_name)        { :settings }
     let(:attribute_value)       { Hash[:one => 1] }

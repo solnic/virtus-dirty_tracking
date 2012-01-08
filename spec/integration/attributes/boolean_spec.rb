@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Virtus::Attributes::Boolean do
+describe Virtus::Attribute::Boolean do
   it_should_behave_like "Dirty Trackable Attribute" do
     let(:attribute_name)        { :is_admin }
     let(:attribute_value)       { true }

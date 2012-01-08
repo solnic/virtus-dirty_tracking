@@ -6,13 +6,13 @@ module Virtus
   #
   # Dirty Tracking is an optional module that you include only if you need it.
   module DirtyTracking
-    # Extends a class with DirtyTracking::Attributes module
+    # Extends a class with DirtyTracking::Attribute module
     #
     # @param [Class] base
     #
     # @api private
     def self.included(base)
-      base.extend(DirtyTracking::Attributes)
+      base.extend(DirtyTracking::Attribute)
     end
 
     # Returns if an object is dirty
@@ -77,12 +77,12 @@ module Virtus
       @_dirty_session ||= Session.new(self)
     end
 
-    module Attributes
+    module Attribute
       # Creates an attribute writer with dirty tracking
       #
-      # @see Virtus::Attributes.attribute
+      # @see Virtus::Attribute.attribute
       #
-      # @return [Virtus::Attributes::Object]
+      # @return [Virtus::Attribute::Object]
       #
       # @api public
       def attribute(name, type, options = {})
@@ -97,15 +97,12 @@ module Virtus
       # @param [Symbol] name
       #   the name of an attribute
       #
-      # @param [Virtus::Attributes::Object] attribute
+      # @param [Virtus::Attribute::Object] attribute
       #   an attribute instance
       #
       # @api private
       def _create_writer_with_dirty_tracking(name, attribute)
         class_eval <<-RUBY, __FILE__, __LINE__ + 1
-          chainable(:dirty_tracking) do
-            #{attribute.writer_visibility}
-
             def #{name}=(value)
               prev_value = #{name}
               new_value  = super
@@ -120,9 +117,8 @@ module Virtus
 
               new_value
             end
-          end
         RUBY
       end
-    end # Attributes
+    end # Attribute
   end # DirtyTracking
 end # Virtus

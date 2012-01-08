@@ -25,7 +25,7 @@ module Virtus
       #
       # @api semipublic
       def dirty_attributes
-        (@_dirty_attributes ||= {}).update(complex_attributes)
+        @_dirty_attributes ||= {}
       end
 
       # Sets an attribute as dirty
@@ -52,42 +52,6 @@ module Virtus
       # @api semipublic
       def dirty?(name = nil)
         name ? dirty_attributes.key?(name) : dirty_attributes.any?
-      end
-
-      private
-
-      # Returns a values of complex dirty attributes that can be modified via
-      # their own APIs like Hash[] or Array<<
-      #
-      # @return [Hash]
-      #   an attributes hash indexed by attribute names
-      #
-      # @api private
-      def complex_attributes
-        values = {}
-
-        complex_attributes_set.each do |name, attribute|
-          value = subject.__send__(name)
-
-          if original_attributes[name] != value
-            values[name] = value
-          end
-        end
-
-        values
-      end
-
-      # Returns a hash of complex attribute instances defined on
-      # the subject's class.
-      #
-      # @return [Hash]
-      #   the attribute instances hash indexed by attribute names
-      #
-      # @api private
-      def complex_attributes_set
-        @_complex_attributes_set ||= subject.class.attributes.select do |name, attribute|
-          attribute.complex?
-        end
       end
     end # Session
   end # DirtyTracking

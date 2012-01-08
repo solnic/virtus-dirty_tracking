@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Virtus::Attributes::Array do
+describe Virtus::Attribute::Array do
   it_should_behave_like 'Dirty Trackable Attribute' do
     let(:attribute_name)        { :colors }
     let(:attribute_value)       { [ 'red', 'green', 'blue' ] }

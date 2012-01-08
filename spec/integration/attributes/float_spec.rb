@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Virtus::Attributes::Float do
+describe Virtus::Attribute::Float do
   it_should_behave_like 'Dirty Trackable Attribute' do
     let(:attribute_name)        { :score }
     let(:attribute_value)       { 12.34 }
