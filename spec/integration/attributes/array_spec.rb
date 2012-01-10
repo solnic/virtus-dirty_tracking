@@ -11,7 +11,7 @@ describe Virtus::Attribute::Array do
     let(:model) do
       Class.new do
         include Virtus
-        include Virtus::DirtyTracking
+        include Virtus::Dirty
 
         attribute :colors, Array
       end

@@ -2,7 +2,7 @@ shared_examples_for "Dirty Trackable Attribute" do
   let(:model) do
     model = Class.new do
       include Virtus
-      include Virtus::DirtyTracking
+      include Virtus::Dirty
     end
     model.attribute attribute_name, described_class
     model

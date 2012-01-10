@@ -24,9 +24,6 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "lib/virtus/dirty_tracking.rb",
-    "lib/virtus/dirty_tracking/session.rb",
-    "lib/virtus/dirty_tracking/version.rb",
     "spec/integration/attributes/array_spec.rb",
     "spec/integration/attributes/boolean_spec.rb",
     "spec/integration/attributes/date_spec.rb",
@@ -71,11 +68,23 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<simplecov>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<simplecov>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_runtime_dependency(%q<virtus>, [">= 0"])
     else
       s.add_dependency(%q<virtus>, ["~> 0.0.1"])
       s.add_dependency(%q<virtus-dirty>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<simplecov>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<simplecov>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<simplecov>, [">= 0"])
@@ -100,6 +109,12 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<virtus>, ["~> 0.0.1"])
     s.add_dependency(%q<virtus-dirty>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<simplecov>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<simplecov>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<simplecov>, [">= 0"])

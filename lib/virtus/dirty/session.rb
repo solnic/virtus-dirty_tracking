@@ -1,5 +1,5 @@
 module Virtus
-  module DirtyTracking
+  module Dirty
     class Session
       attr_reader :subject
 
@@ -54,5 +54,5 @@ module Virtus
         name ? dirty_attributes.key?(name) : dirty_attributes.any?
       end
     end # Session
-  end # DirtyTracking
+  end # Dirty
 end # Virtus

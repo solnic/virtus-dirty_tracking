@@ -1,18 +1,18 @@
 require 'virtus'
-require 'virtus/dirty_tracking/session'
+require 'virtus/dirty/session'
 
 module Virtus
   # == Dirty Tracking
   #
   # Dirty Tracking is an optional module that you include only if you need it.
-  module DirtyTracking
-    # Extends a class with DirtyTracking::Attribute module
+  module Dirty
+    # Extends a class with Dirty::Attribute module
     #
     # @param [Class] base
     #
     # @api private
     def self.included(base)
-      base.extend(DirtyTracking::Attribute)
+      base.extend(Dirty::Attribute)
     end
 
     # Returns if an object is dirty
@@ -70,7 +70,7 @@ module Virtus
 
     # Returns the current dirty tracking session
     #
-    # @return [Virtus::DirtyTracking::Session]
+    # @return [Virtus::Dirty::Session]
     #
     # @api private
     def dirty_session
@@ -120,5 +120,5 @@ module Virtus
         RUBY
       end
     end # Attribute
-  end # DirtyTracking
+  end # Dirty
 end # Virtus

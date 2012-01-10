@@ -1,4 +1,4 @@
-= Virtus - Dirty Tracking
+= VirtusDirty
 
 Support for dirty tracking of virtus attributes.
 
