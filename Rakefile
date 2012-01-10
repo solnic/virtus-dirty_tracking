@@ -4,11 +4,11 @@ require 'jeweler'
 require 'rspec/core/rake_task'
 
 Jeweler::Tasks.new do |gem|
-  gem.name        = "virtus-dirty_tracking"
+  gem.name        = "virtus-dirty"
   gem.platform    = Gem::Platform::RUBY
-  gem.authors     = ["Piotr Solnica"]
-  gem.email       = ["piotr@rubyverse.com"]
-  gem.homepage    = "https://github.com/solnic/virtus-dirty_tracking"
+  gem.authors     = ["Jingwen Owen Ou"]
+  gem.email       = ["jingweno@gmail.com"]
+  gem.homepage    = "https://github.com/jingweno/virtus-dirty"
   gem.summary     = %q{Add dirty tracking of attributes to your ruby objects}
   gem.description = gem.summary
 

@@ -39,4 +39,4 @@ Support for dirty tracking of virtus attributes.
 
 == Copyright
 
-Copyright (c) 2011 Piotr Solnica. See LICENSE for details.
+Copyright (c) 2011 Jingwen Owen Ou. See LICENSE for details.
