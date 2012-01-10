@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Piotr Solnica"]
-  s.date = "2012-01-08"
+  s.date = "2012-01-10"
   s.description = "Add dirty tracking of attributes to your ruby objects"
   s.email = ["piotr@rubyverse.com"]
   s.extra_rdoc_files = [
@@ -69,11 +69,17 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<simplecov>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_runtime_dependency(%q<virtus>, [">= 0"])
     else
       s.add_dependency(%q<virtus>, ["~> 0.0.1"])
       s.add_dependency(%q<virtus-dirty_tracking>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<simplecov>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<simplecov>, [">= 0"])
@@ -83,6 +89,9 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<virtus>, ["~> 0.0.1"])
     s.add_dependency(%q<virtus-dirty_tracking>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<simplecov>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<simplecov>, [">= 0"])
