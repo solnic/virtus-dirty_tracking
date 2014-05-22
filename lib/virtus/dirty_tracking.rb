@@ -1,5 +1,5 @@
 require 'virtus'
-require Pathname(__FILE__).dirname.expand_path + 'virtus/dirty_tracking/session'
+require 'virtus/dirty_tracking/session'
 
 module Virtus
   # == Dirty Tracking
